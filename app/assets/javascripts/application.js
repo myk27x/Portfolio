@@ -16,21 +16,6 @@
 //= require jquery.modal
 //= require_tree .
 
-$(function() {
-    var canvas = document.createElement("canvas");
-    canvas.width = 30;
-    canvas.height = 30;
-    //document.body.appendChild(canvas);
-    var ctx = canvas.getContext("2d");
-    ctx.fillStyle = "#000000";
-    ctx.font = "24px FontAwesome";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText("\uf259", 15, 15);
-    var dataURL = canvas.toDataURL('image/png')
-    $('body').css('cursor', 'url('+dataURL+'), auto');
-});
-
 $(document).ready(function(){
 
   $.modal.defaults = ({
