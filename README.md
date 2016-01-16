@@ -1,6 +1,6 @@
-#H1 My Portfolio
+# My Portfolio
 
-This portfolio is live [here](www.michaelreed.me).
+This portfolio is live [here](http://www.michaelreed.me).
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
