@@ -1,0 +1,41 @@
+.intro Who am I?
+#whoAmI
+  .holder
+    .spacer
+    #name Michael Reed
+  .blurb= render "blurb"
+
+.intro Projects
+.project
+  .left-display
+    .image
+      .title Some title here
+  .about
+    .description
+    .links
+      - if true
+        See this project
+        = link_to 'live', 'https://www.google.com', target: "_blank"
+        or
+      -else
+        This project is not live, but to
+      view the
+      = link_to 'code', @project, target: "_blank"
+      on GitHub
+
+-# = render @projects ???
+-# OR
+-# = Project.all.each do |project|
+  .project
+    .left-display
+      .title= project.title
+      .image= image_tag("/#{project.image}")
+    .about
+      .description= project.description
+      .links
+        - if project.live
+          See this project
+          = link_to('live', project.live)} or
+        view the
+        = link_to 'code', @project, target: "_blank"
+        on GitHub

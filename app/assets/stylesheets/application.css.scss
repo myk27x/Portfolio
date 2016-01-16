@@ -1,0 +1,22 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ *= require_tree .
+ *= require_self
+ *= require jquery-ui
+ *= require jquery.modal
+*/
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+  margin: 0;
+  .modal {
+    border-radius: 2px;
+    width: auto;
+    background: none;
+    padding: 0;
+  }
+}

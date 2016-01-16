@@ -1,0 +1,53 @@
+#me-container {
+  position: fixed;
+  width: 25%;
+  z-index: 1;
+  #photo {
+    width: 316px;
+    min-width: 100px;
+    max-width: 316px;
+    border: solid 2px white;
+    border-radius: 50%;
+  }
+  .centering {
+    width: 140px;
+    margin: 0 auto;
+  }
+  #media-links {
+    margin-top: 2px;
+    font-size: 32px;
+    display: flex;
+    a {
+      text-decoration: none;
+    }
+    #linkedin, #twitter, #github, #medium {
+      margin: 0 5px;
+    }
+    .bg {
+      background: white;
+      line-height: 27px;
+      height: 26px;
+      width: 27px;
+      border-radius: 5px;
+    }
+    .fa-linkedin-square {
+      color: #007BB5;
+    }
+    .fa-twitter-square {
+      color: #55ACEE;
+    }
+    .fa-github-square {
+      color: #333;
+    }
+    .fa-medium {
+      font-size: 29px;
+      color: lime;
+    }
+  }
+}
+
+.fix2nav {
+  position: fixed;
+  top: 112px;
+  left: 88px;
+}
