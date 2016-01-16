@@ -40,14 +40,14 @@ function animateMedia() {
         }
       }
     } else {
-        $('#media-links')
-          .removeClass('fix2nav')
-          .css('left', '')
-          .css('top', '')
-        $('#name')
-          .css('position', '')
-          .css('left', '')
-          .css('top', '')
+      $('#media-links')
+        .removeClass('fix2nav')
+        .css('left', '')
+        .css('top', '')
+      $('#name')
+        .css('position', '')
+        .css('left', '')
+        .css('top', '')
     }
   });
 };
