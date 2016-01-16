@@ -1,4 +1,4 @@
-var images = new Array('test2.jpg', 'test.jpg')
+var images = new Array('bricks.jpg', 'binary_world.jpg')
 var nextImage = 0
 function cycleImages(){
   if(nextImage >= images.length){ nextImage=0; }
@@ -9,7 +9,7 @@ function cycleImages(){
   });
 };
 
-var colors = new Array('black', 'gray')
+var colors = new Array('black', 'white')
 var nextColor = 0
 function cycleColors(){
   if(nextColor >= colors.length){ nextColor=0; }
