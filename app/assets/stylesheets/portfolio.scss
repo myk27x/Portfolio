@@ -1,0 +1,30 @@
+#header {
+  height: 354px;
+  transition: background-image 3s ease-in-out;
+}
+
+#main {
+  background: blue;
+  height: 200vh;
+}
+
+#footer {
+  background: yellow;
+  display: flex;
+  flex-wrap: wrap;
+  height: 10vh;
+  width: 100%;
+  #login {
+    background: green;
+    float: left;
+    width: 100px;
+    height: 10vh;
+  }
+  #logout {
+    background: black;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 10vh;
+  }
+}
