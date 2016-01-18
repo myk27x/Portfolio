@@ -33,13 +33,6 @@ $(document).ready(function(){
     fadeDelay: .75        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
   });
 
-  $('#contact').children('.navlinks').click(function(){
-    $('#info').slideToggle(500);
-    if ($(this).css('display') == 'block') {
-      $('#info').css('display', 'flex')
-    }
-  });
-
   cycleImages();
   cycleColors();
   animateMedia();
