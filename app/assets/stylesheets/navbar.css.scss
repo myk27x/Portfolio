@@ -8,71 +8,78 @@
   .spacer {
     width: 25%;
   }
-  #about, #projects, #contact {
+  #toAbout, #toProjects, #openContact {
     width: 25%;
     font-family: sans-serif;
     font-size: 40px;
     text-align: center;
   }
-    #info {
-      display: none;
-      // display: flex; TODO: use for testing -- remove when done
-      flex-wrap: wrap;
-      height: 181px;
-      width: 100%;
-      padding-left: 4px;
-      background: rgba(255, 255, 255, 0.8);
-      border: ridge 4px gray;
-      border-right: none;
-      border-radius: 5px 0 0 5px;
-      #icons {
-        #globe-background {
-          width: 32px;
-          height: 32px;
-          margin: 7px 2px;
-          border-radius: 100%;
-          background-color: forestgreen;
-          .fa-globe {
-            color: aqua;
-            line-height: 33px;
-          }
-        }
-        .fa-envelope-o {
-          color: black;
-        }
-        .fa-phone-square {
-          color: green;
-        }
-        .fa-file-pdf-o {
-          color: red;
-        }
-        * {
-          height: 45px;
+  #info {
+    display: none;
+    flex-wrap: wrap;
+    height: 181px;
+    width: 100%;
+    padding-left: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    border: ridge 4px gray;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    #icons {
+      #globe-background {
+        width: 32px;
+        height: 32px;
+        margin: 7px 2px;
+        border-radius: 100%;
+        background-color: forestgreen;
+        .fa-globe {
+          color: aqua;
+          line-height: 33px;
         }
       }
-      #contact-text {
-        text-align: left;
-        line-height: 38px;
+      .fa-envelope-o {
         color: black;
-        * {
-          height: 45px;
-        }
       }
-      a {
-        text-decoration: none;
-        &:visited {
-          text-decoration: none;
-          color: inherit;
-        }
+      .fa-phone-square {
+        color: green;
+      }
+      .fa-file-pdf-o {
+        color: red;
+      }
+      * {
+        height: 45px;
       }
     }
-    .navlinks {
-      height: 50px;
-      cursor: pointer;
-      padding: 0 10px;
-      &:hover {
-        background: white;
-        color: dodgerblue;
+    #contact-text {
+      text-align: left;
+      line-height: 38px;
+      color: black;
+      * {
+        height: 45px;
+      }
+    }
+    a {
+      text-decoration: none;
+      &:visited {
+        text-decoration: none;
+        color: inherit;
       }
     }
   }
+  .navlinks {
+    height: 50px;
+    cursor: pointer;
+    padding: 0 10px;
+    &:hover {
+      background: white;
+      color: dodgerblue;
+    }
+  }
+  #toTop {
+    position: absolute;
+    top: 83vh;
+    right: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
