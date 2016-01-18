@@ -1,0 +1,40 @@
+.project {
+  height: 250px;
+  width: 84%;
+  display: flex;
+  margin: 0 8%;
+  padding-top: 25px;
+  .left-display {
+    width: 25%;
+    border: solid 2px black;
+    border-right: none;
+    .image {
+      background: rgba(255, 255, 0, 0.5);;
+      height: 242px;
+      border: solid 2px white;
+      .title {
+        opacity: 1;
+        margin-top: 40px;
+        text-align: center;
+      }
+    }
+  }
+  .about {
+    width: 75%;
+    height: 246px;
+    border: solid 2px black;
+    border-left: none;
+    .description {
+
+    }
+    .links {
+      text-align: center;
+      width: 100%;
+      color: white;
+      padding-top: 29%;
+      a{
+        color: red;
+      }
+    }
+  }
+}
