@@ -7,6 +7,8 @@ function animateMedia() {
 // resizes profile image on scroll
     if (distanceY > shrinkOn){
       $('#photo').css('width', (picWidth-(distanceY-29)))
+    } else {
+      $('#photo').css('width', picWidth)
     }
 
 // adjusts social media links to sit in navbar when div enters desired position
@@ -48,6 +50,18 @@ function animateMedia() {
         .css('position', '')
         .css('left', '')
         .css('top', '')
+    }
+
+    // slides toTop div up when after scrolling
+    switch (true) {
+      case (distanceY > 150):
+        $('#toTop').slideDown(300);
+        break;
+      case (distanceY < 150):
+        $('#toTop').slideUp(300);
+        break;
+      default:
+
     }
   });
 };
