@@ -13,7 +13,7 @@ $(document).ready(function(){
     $('body').animate({scrollTop: $('#projects').offset().top -15}, 600);
   });
 
-  $('#contact').children('.navlinks').click(function(){
+  $('#openContact').children('.navlinks').click(function(){
     $('#info').slideToggle(500);
     if ($(this).css('display') == 'block') {
       $('#info').css('display', 'flex')
