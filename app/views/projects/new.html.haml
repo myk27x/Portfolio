@@ -2,10 +2,16 @@
 
 #projectForm
   = form_for Project.new do |f|
-    = f.label :title, "Title"
+    = f.label      :title, "Title"
     = f.text_field :title
-    = f.label :image, "Image"
+    = f.label      :image, "Image"
     = f.text_field :image
+    = f.label      :live,  "Live?"
+    = f.check_box  :live
+    = f.label      :site,  "Link"
+    = f.text_field :site
+    = f.label      :code,  "Code"
+    = f.text_field :code
 
     = f.submit "SUBMIT"
 

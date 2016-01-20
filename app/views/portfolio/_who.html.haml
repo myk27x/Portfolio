@@ -6,20 +6,20 @@
   .blurb= render "blurb"
 
 .intro#projects Projects
-.project
-  - @projects.each do |project|
+- @projects.each do |project|
+  .project
     .left-display
       .image{ style: "background-image: url('#{project.image}')"}
         .title= project.title
     .about
       .description
       .links
-        - if true
+        - if project.live
           See this project
-          = link_to 'live', '#', target: "_blank"
+          = link_to 'live', "http://#{project.site}", target: "_blank"
           or
         -else
           This project is not live, but to
         view the
-        = link_to 'code', "#", target: "_blank"
+        = link_to 'code', "http://#{project.code}", target: "_blank"
         on GitHub
