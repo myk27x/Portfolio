@@ -21,3 +21,6 @@
 
 # Why would I want to send the byebug history?
 .byebug_history
+
+# keep public images private lolol
+/public
