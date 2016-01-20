@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   # FOR USE ON PROJECTS/EDIT
   def authorize
-    redirect_to '/' unless @current_user
+    redirect_to '/' unless current_user
   end
 
 end
