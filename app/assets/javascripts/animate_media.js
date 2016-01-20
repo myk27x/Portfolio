@@ -55,7 +55,9 @@ function animateMedia() {
     // slides toTop div up when after scrolling
     switch (true) {
       case (distanceY > 150):
-        $('#toTop').slideDown(300);
+        $('#toTop')
+          .slideDown(300)
+          .css('display', 'inline');
         break;
       case (distanceY < 150):
         $('#toTop').slideUp(300);
