@@ -1,9 +1,11 @@
-.intro#about Who am I?
+#about
 #whoAmI
   .holder
     .spacer
     #name Michael Reed
-  .blurb= render "blurb"
+  .blurb
+    .intro Who am I?
+    = render "blurb"
 
 .intro#projects Projects
 - @projects.each do |project|
