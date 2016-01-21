@@ -29,15 +29,16 @@ function animateMedia() {
         $('#media-links')
           .css('top', 20)
           .css('left', 110)
-        $('#name')
-          .css('position', 'absolute')
         if ((distanceY >= 348) && (distanceY < 388)) {
           $('#name')
+            .css('position', 'absolute')
+            .css('top', '')
             .css('left', (53 + ((distanceY-265)/2)))
         }
         if (pageYOffset >= 389) {
           $('#name')
-            .css('top', (distanceY+38))
+            .css('position', 'fixed')
+            .css('top', 36)
             .css('left', 114)
         }
       }
@@ -55,12 +56,10 @@ function animateMedia() {
     // slides toTop div up when after scrolling
     switch (true) {
       case (distanceY > 150):
-        $('#toTop')
-          .slideDown(300)
-          .css('display', 'inline');
+        $('#footerOverlay').slideDown(400)
         break;
       case (distanceY < 150):
-        $('#toTop').slideUp(300);
+        $('#footerOverlay').slideUp(400);
         break;
       default:
 
