@@ -1,31 +1,25 @@
-#pusher {
+#about {
+  #name {
+    position: absolute;
+    top: 425px;
+    left: 95px;
+    margin-top: 15px;
+  }
+}
+
+#blurb {
+  height: 229px;
+  p {
+    margin: 0;
+  }
+}
+
+.pusher {
   height: 71px;
 }
 
-.intro {
+.sectionIntro {
   padding-top: 15px;
   text-align: center;
   font-size: 28px;
-  color: black;
-}
-
-#whoAmI {
-  display: flex;
-  .holder {
-    width: 316px;
-    display: flex;
-    .spacer {
-      width: 30%;
-    }
-    #name {
-      margin-top: 15px;
-      font-size: 28px;
-      color: black;
-    }
-  }
-  .blurb {
-    color: black;
-    width: 50%;
-    padding: 0px 2px 0 10px;
-  }
 }

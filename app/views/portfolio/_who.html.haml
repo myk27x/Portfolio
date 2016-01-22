@@ -1,29 +1,10 @@
-#pusher
-#whoAmI
-  .holder
-    .spacer
-    #name Michael Reed
-  .blurb
-    .intro#about Who am I?
-    #pusher
-    = render "blurb"
+.pusher
+.sectionIntro#about
+  Who am I?
+  #name Michael Reed
+.pusher
+#blurb= render "blurb"
 
-.intro#projects Projects
-#pusher
-- @projects.each do |project|
-  .project
-    .left-display
-      .image{ style: "background-image: url('#{project.image}')"}
-        .title= project.title
-    .about
-      .description
-      .links
-        - if project.live
-          See this project
-          = link_to 'live', "http://#{project.site}", target: "_blank"
-          or
-        -else
-          This project is not live, but to
-        view the
-        = link_to 'code', "http://#{project.code}", target: "_blank"
-        on GitHub
+.sectionIntro#projects Projects
+.pusher
+= render @project

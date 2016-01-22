@@ -1,0 +1,16 @@
+.project{ id: "project_#{project.id}" }
+  .left-display
+    .image{ style: "background-image: url('#{project.image}')"}
+      .title= project.title
+  .about
+    .description
+    .links
+      - if project.live
+        See this project
+        = link_to 'live', "http://#{project.site}", target: "_blank"
+        or
+      -else
+        This project is not live, but to
+      view the
+      = link_to 'code', "http://#{project.code}", target: "_blank"
+      on GitHub
