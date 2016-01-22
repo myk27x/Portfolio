@@ -1,13 +1,15 @@
-#about
+#pusher
 #whoAmI
   .holder
     .spacer
     #name Michael Reed
   .blurb
-    .intro Who am I?
+    .intro#about Who am I?
+    #pusher
     = render "blurb"
 
 .intro#projects Projects
+#pusher
 - @projects.each do |project|
   .project
     .left-display

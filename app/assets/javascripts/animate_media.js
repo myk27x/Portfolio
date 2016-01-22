@@ -53,7 +53,7 @@ function animateMedia() {
         .css('top', '')
     }
 
-    // slides toTop div up when after scrolling
+// toggles toTop div when scrolling down
     switch (true) {
       case (distanceY > 150):
         $('#footerOverlay').slideDown(400)
@@ -62,7 +62,39 @@ function animateMedia() {
         $('#footerOverlay').slideUp(400);
         break;
       default:
-
     }
+
+// fill the navbar background after scrolling down
+    if ((distanceY >= 304) && ($('#navFiller').height() < 51)) {
+      $('#navFiller')
+        .css('top', (354 - distanceY))
+        .css('height', (distanceY - 304))
+      if ($('#navFiller').height() > 50) {
+        $('#navFiller').css('top', 0).css('height', 50)
+      }
+    } else {
+      $('#navFiller').css('top', 50).css('height', 0)
+    }
+
+// positions section names under navbar as section header
+    if (distanceY >= 390) {
+      $('#sectionHeader, #section1, #testSpacer').css('visibility', 'visible')
+      if ((distanceY < 635) && ($('#sectionNames').position().top <= 0)) {
+        $('#sectionNames').css('bottom', 0)
+      }
+      if (distanceY > 673 ) {
+        $('#section2').css('visibility', 'visible')
+        $('#sectionNames').css('bottom', (distanceY - 673))
+      }
+      if (distanceY > 740) {
+        $('#sectionNames').css('bottom', 67)
+      }
+      if (distanceY < 706) {
+        $('#section2').css('visibility', 'hidden')
+      }
+    } else {
+      $('#sectionHeader, #section1, #section2, #testSpacer').css('visibility', 'hidden')
+    }
+
   });
 };

@@ -1,8 +1,44 @@
-#navbar {
+.fixed {
   position: fixed;
-  background: linear-gradient( to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.8) 100%);
-  height: 50px;
   width: 100%;
+  display: block;
+}
+
+#sectionHeader {
+  height: 32px;
+  background: white;
+  top: 50px;
+  text-align: center;
+  visibility: hidden;
+  #sectionNames {
+    font-size: 28px;
+    position: relative;
+    bottom: 0px;
+    #section1 {
+      padding: 1px 0 0 20px;
+      visibility: hidden;
+    }
+    #section2 {
+      visibility: hidden;
+    }
+  }
+}
+
+#testSpacer {
+  top: 82px;
+  height: 2px;
+  background: black;
+  visibility: hidden;
+}
+
+#navFiller {
+  top: 50px;
+  background: #FFF8DC;
+}
+
+#navbar {
+  height: 50px;
+  background: linear-gradient( to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.8) 100%);
   transition: color 3s ease-in-out;
   display: flex;
   .spacer {
@@ -80,9 +116,7 @@
   background: linear-gradient( to bottom, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 1) 100%);
   -webkit-backdrop-filter: blur(2px); //only works in safari currently :'(
   display: none;
-  position: fixed;
   bottom: 0;
-  width: 100%;
   text-align: center;
   #toTop {
     display: inline;
