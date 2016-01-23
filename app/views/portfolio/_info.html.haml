@@ -1,17 +1,13 @@
 #info
-  #icons.fa
-    #globe-background
-      .fa-globe
-    .fa-envelope-o
-    .fa-phone-square
-    .fa-file-pdf-o
-  #contact-text
-    #address : address
-    -# #email= link_to_modal ": email", email_path
-    #email : email
-    #phone : phone
-    #resume= link_to ": resume", "http://bit.ly/230PcSQ", target: "_blank"
-
--# TODO: email to me from a bootstrap modal?
--#       make contact stuff mandatory in f/e (i.e. field cannot be blank)
--#       or rescue from blank field
+  #location
+    .fa.fa-map-marker
+    .textInfo : LOCATION
+  #email
+    .fa.fa-envelope
+    .textInfo= link_to_modal ": EMAIL", email_path
+  #phone
+    .fa.fa-phone-square
+    .textInfo : PHONE
+  #resume
+    .fa.fa-file-text
+    .textInfo= link_to ": RESUME", "http://bit.ly/230PcSQ", target: "_blank"
