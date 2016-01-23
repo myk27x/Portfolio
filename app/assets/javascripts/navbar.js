@@ -9,14 +9,11 @@ $(document).ready(function(){
   });
 
   $('#toProjects').click(function(){
-    $('body').animate({scrollTop: $('#projects').offset().top -33}, 600);
+    $('body').animate({scrollTop: $('#projects').offset().top -32}, 600);
   });
 
   $('#openContact').children('.navlinks').click(function(){
     $('#info').slideToggle(500);
-    if ($(this).css('display') == 'block') {
-      $('#info').css('display', 'flex')
-    }
   });
 
 });
