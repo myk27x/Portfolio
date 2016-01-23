@@ -25,7 +25,7 @@ function animateMedia() {
         $('#media-links')
           .css('left', leftGap)
       }
-      if ($('#media-links').position().top < 21){
+      if (distanceY >= 337){
         $('#media-links')
           .css('top', 20)
           .css('left', 110)
