@@ -1,0 +1,8 @@
+This is where any TODO things should be!
+
+GENERAL: make mobile responsive!
+
+EMAIL: make contact stuff mandatory in f/e (i.e. field cannot be blank)
+       or rescue from blank field
+
+       set up action mailer

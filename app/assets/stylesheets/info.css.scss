@@ -1,0 +1,42 @@
+#info {
+  display: none;
+  width: 100%;
+  background: rgba(187, 187, 187, 1);
+  border: ridge 4px gray;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  #location, #email, #phone, #resume {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 40px;
+    color: black;
+    width: 100%;
+    &:hover {
+      background: (linear-gradient(to right, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 100%));
+      color: #ADE;
+    }
+    .fa {
+      width: 40px;
+      text-align: center;
+      padding: 4px 5px 0 5px;
+    }
+    .fa-map-marker {
+      color: red;
+    }
+    .fa-envelope {
+      color: #3475CD;
+      padding-top: 2px;
+    }
+    .fa-phone-square {
+      color: green;
+      padding-top: 3px;
+    }
+    .fa-file-text {
+      color: #F8F8FF;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}
