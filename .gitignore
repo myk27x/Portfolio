@@ -21,3 +21,6 @@
 
 # Why would I want to send the byebug history?
 .byebug_history
+
+# Keeping sekrets secret!
+.env
