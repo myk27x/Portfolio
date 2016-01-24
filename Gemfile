@@ -41,7 +41,7 @@ gem 'rails_12factor', group: :production
 gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use mailgun account for email handler
-gem 'mailgun', '~> 0.8'
+gem 'mailgun-ruby', '~>1.0.3', require: 'mailgun'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
