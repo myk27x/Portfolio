@@ -40,6 +40,9 @@ gem 'rails_12factor', group: :production
 # keeping sekrets secret
 gem 'dotenv-rails', :groups => [:development, :test]
 
+# Use mailgun account for email handler
+gem 'mailgun', '~> 0.8'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
