@@ -5,17 +5,15 @@
   margin: 0 8%;
   padding: 25px 0;
   .left-display {
-    width: 25%;
+    width: 246px;
     border: solid 2px black;
     border-right: none;
     .image {
+      width: 242px;
       height: 242px;
-      background-size: 100% 100%;
       border: solid 2px white;
-      .title {
-        opacity: 1;
-        margin-top: 40px;
-        text-align: center;
+      img {
+        width: 100%;
       }
     }
   }
@@ -27,6 +25,10 @@
     .description {
       height: 228px;
       width: 100%;
+      .title {
+        margin: 0;
+        text-align: center;
+      }
     }
     .links {
       text-align: center;
