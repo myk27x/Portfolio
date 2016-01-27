@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to:         'portfolio#index'
 
   get  'email'  => 'email#new'
+  post 'email'  => 'email#create'
 
   get  'login'  => 'sessions#new'
   post 'login'  => 'sessions#create'

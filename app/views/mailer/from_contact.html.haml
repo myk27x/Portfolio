@@ -1,0 +1,18 @@
+%div
+  You have a new message from michaelreed.me!
+  %br
+%div
+  From:
+  = @email[:name]
+%div
+  Email:
+  = @email[:email]
+%div
+  Company:
+  = @email[:company] unless nil
+  %br
+  %br
+
+%div
+  %br
+  = @email[:reply]
