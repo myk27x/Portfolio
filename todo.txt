@@ -1,8 +1,16 @@
 This is where any TODO things should be!
 
-GENERAL: make mobile responsive!
+GENERAL:  make mobile responsive!
 
-EMAIL: make contact stuff mandatory in f/e (i.e. field cannot be blank)
-       or rescue from blank field
+EMAIL:    make contact stuff mandatory in f/e (i.e. field cannot be blank)
+          or rescue from blank field
 
-       set up action mailer
+          set up action mailer
+
+          set timeout for modal close?
+
+          style both emails (don't forget txt!)
+
+          modify env for prod???
+
+JS:       change from pageYoffset to waypoint for mobile???
