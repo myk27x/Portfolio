@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
 
 private
   def project_params
-    params.require(:project).permit(:title, :image, :live, :site, :code)
+    params.require(:project).permit(:title, :title_font, :image, :live, :site, :code)
   end
 
 end
