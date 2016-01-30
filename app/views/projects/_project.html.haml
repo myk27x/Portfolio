@@ -1,29 +1,8 @@
-.container
-  .project{ id: "project_#{project.id}" }
-    .left-display
-      = link_to_modal project_path(project) do
-        .image= image_tag("#{project.image}")
-    .about
-      - if project.title_font
-        %h1.title{ style: "font-family: #{project.title_font};" }= project.title
-      - else
-        %h1.title= project.title
-      .description
-        .what
-          = project.description.gsub(/\n/, '<br/>').html_safe
-        .how TECH
-        .tech= project.tech
-      .links
-        - if project.live
-          See this project
-          = link_to 'live', "http://#{project.site}", target: "_blank"
-          or
-        -else
-          This project is not live, but you can
-        view the
-        = link_to 'code', "http://#{project.code}", target: "_blank"
-        on GitHub
-      -# - if current_user
-        .edit= link_to "EDIT", edit_project_path(project)
-        .show= link_to "SHOW", project_path(project)
-        .all=  link_to  "ALL", projects_path
+.project{ id: "project_#{project.id}" }
+  .left-display
+    = link_to_modal project_path(project) do
+      .image= image_tag("#{project.image}")
+  - if current_user
+    .admin-links
+      .edit= link_to "EDIT", edit_project_path(project)
+      .show= link_to "SHOW", project_path(project)
