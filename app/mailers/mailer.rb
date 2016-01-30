@@ -1,5 +1,5 @@
 class Mailer < ApplicationMailer
-  default from: "Michael@michaelreed.me"
+  default from: "noreply@michaelreed.me"
 
   def thank_you(email)
     @email = email
