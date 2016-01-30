@@ -22,6 +22,12 @@ class ProjectsController < ApplicationController
     redirect_to project_path(@project)
   end
 
+  def destroy
+    @project.destroy
+
+    redirect_to projects_path
+  end
+
 private
   def project_params
     params.require(:project).permit(:title, :title_font, :description, :image, :live, :site, :code, :tech)
