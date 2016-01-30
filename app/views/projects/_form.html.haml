@@ -1,27 +1,28 @@
-= link_to "home", root_path
 = form_for @project do |f|
-  .project
-    .left-display
-      .image
-        = f.label      :image, "Image"
-        = f.text_field :image
-    .about
-      %h1.title
-        = f.text_field :title,      placeholder: "Title"
-        = f.text_field :title_font, placeholder: "Title Font"
-      .description
-        .what= f.text_area :description, placeholder: "Description", class: 'large'
-        .how TECH
-        .tech= f.text_field :tech, placeholder: "Tech", class: 'wide'
-      .links
-        = f.label      :live,  "Live?"
-        = f.check_box  :live
-        See this project
-        = f.text_field :site, placeholder: "Link"
-        or
-        view the
-        = f.text_field :code, placeholder: "Code"
-        on GitHub
-      .submit
-        = f.submit "SUBMIT"
-      .show= link_to "SHOW", project_path(@project)
+  .about
+    .image
+      = f.label      :image, "Image"
+      = f.text_field :image
+    %h1.title
+      = f.text_field :title,      placeholder: "Title"
+      = f.text_field :title_font, placeholder: "Title Font"
+    .description
+      .what= f.text_area :description, placeholder: "Description", class: 'large'
+      .how TECH
+      .tech= f.text_field :tech, placeholder: "Tech", class: 'wide'
+    .links
+      = f.label      :live,  "Live?"
+      = f.check_box  :live
+      See this project
+      = f.text_field :site, placeholder: "Link"
+      or
+      view the
+      = f.text_field :code, placeholder: "Code"
+      on GitHub
+    .submit
+      = f.submit "SUBMIT"
+    - if current_user
+      .admin-links
+        - if @project.title
+          .show= link_to "SHOW", project_path(@project)
+        .home= link_to "HOME", root_path
