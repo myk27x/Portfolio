@@ -6,5 +6,8 @@
 #blurb= render "blurb"
 
 .sectionIntro#projects Projects
+- if current_user
+  #viewAllProjects=  link_to  "VIEW ALL", projects_path
 .pusher
-= render @project
+.projectContainer
+  = render @project
