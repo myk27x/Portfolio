@@ -16,11 +16,11 @@
   #email-form
     %br
     =form_for @email do |f|
-      = f.text_field :name, placeholder: "Name"
-      = f.text_field :email, placeholder: "email"
+      = f.text_field :name   , placeholder: "Name"
+      = f.text_field :email  , placeholder: "email"
       = f.text_field :company, placeholder: "Company (if applicable)"
       = f.text_field :subject, placeholder: "Subject:"
-      = f.text_area :reply, placeholder: "What would you like to say to me?"
+      = f.text_area  :reply  , placeholder: "What would you like to say to me?"
       #send.button send
       %br
       %br
