@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :authorize,   except: [:show]
-  before_action :set_project, except: [:index, :new]
+  before_action :set_project, except: [:index, :new, :create]
 
   def index
     @project = Project.all
@@ -11,9 +11,17 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    Project.create(project_params)
+    @project = Project.create(project_params)
 
-    redirect_to project_path(params[:id])
+    redirect_to project_path(@project)
+  end
+
+  def edit
+
+  end
+
+  def show
+
   end
 
   def update
