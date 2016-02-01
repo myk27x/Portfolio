@@ -2,15 +2,15 @@
 
   #thanks
     %h1 Thanks for visiting!
-    -# %h3
-    -#   Use this form to send me an email
-    -#   %br and I'll get back with you as soon as possible!
+    %h3
+      Use this form to send me an email
+      %br and I'll get back with you as soon as possible!
 
     -# Use as default when working on emailer
-    %h2{ style: "color: red;"} This section is under construction
-    %h4
-      Please press the escape button
-      %br and view my resume for contact info
+    -# %h2{ style: "color: red;"} This section is under construction
+    -# %h4
+    -#   Please press the escape button
+    -#   %br and view my resume for contact info
 
 
   #email-form
@@ -21,8 +21,7 @@
       = f.text_field :company, placeholder: "Company (if applicable)"
       = f.text_field :subject, placeholder: "Subject:"
       = f.text_area  :reply  , placeholder: "What would you like to say to me?"
-      -# remove display none after DNS verification
-      #send.button{style: "display:none;"} send
+      #send.button send
       %br
       %br
 
