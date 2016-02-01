@@ -7,8 +7,8 @@ class EmailController < ApplicationController
   def create
     @email = email_params
 
-    # Mailer.from_contact(@email).deliver_now
-    # Mailer.thank_you(@email).deliver_now
+    Mailer.from_contact(@email).deliver_now
+    Mailer.thank_you(@email).deliver_now
 
     head :created
   end
