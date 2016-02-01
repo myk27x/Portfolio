@@ -2,16 +2,10 @@ This is where any TODO things should be!
 
 GENERAL:  make mobile responsive!
 
-          verify DNS on mailgun...
-
 EMAIL:    make contact stuff mandatory in f/e (i.e. field cannot be blank)
           or rescue from blank field
 
-          set timeout for modal close?
-
           style both emails (don't forget txt!)
-
-          modify env for prod???
 
 JS:       change from pageYoffset to waypoint for mobile???
 
