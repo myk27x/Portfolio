@@ -1,5 +1,7 @@
+%br
 %div
   You have a new message from michaelreed.me!
+  %br
   %br
 %div
   From:
@@ -11,8 +13,6 @@
   Company:
   = @email[:company] unless nil
   %br
-  %br
-
 %div
   %br
-  = @email[:reply]
+  = @email[:reply].gsub(/\n/, '<br/>').html_safe
