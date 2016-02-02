@@ -26,18 +26,74 @@
       %br
 
 :javascript
+  //http://davidwalsh.name/javascript-debounce-function
+  function debounce(func, wait, immediate) {
+  var timeout;
+  return function() {
+  var context = this, args = arguments;
+  var later = function() {
+  timeout = null;
+  if (!immediate) func.apply(context, args);
+  };
+  var callNow = immediate && !timeout;
+  clearTimeout(timeout);
+  timeout = setTimeout(later, wait);
+  if (callNow) func.apply(context, args);
+  };
+  };
+
+  var name;
+  var email;
+  var reply;
+  var empty = ''
+  function checkNotEmpty() {
+  name = document.querySelector('#_name').value
+  email = document.querySelector('#_email').value
+  reply = document.querySelector('#_reply').value
+  if ((name != empty) && (email != empty) && (reply != empty)) {
+  return true;
+  }
+  }
+
+  function alertMissingFields() {
+  if (name == empty) {
+  $('#_name').css('border', '2px solid rgba(255, 0, 0, 0.5)')
+  } else {
+  $('#_name').css('border', '2px solid rgba(0, 255, 0, 0.5)')
+  }
+  if (email == empty) {
+  $('#_email').css('border', '2px solid rgba(255, 0, 0, 0.5)')
+  } else {
+  $('#_email').css('border', '2px solid rgba(0, 255, 0, 0.5)')
+  }
+  if (reply == empty) {
+  $('#_reply').css('border', '2px solid rgba(255, 0, 0, 0.5)')
+  } else {
+  $('#_reply').css('border', '2px solid rgba(0, 255, 0, 0.5)')
+  }
+  };
+
   function closeModal() {
   $('.close-modal').click();
   }
 
-  function delayModalClose() {
-  window.setTimeout(closeModal, 2200);
+  function watchFields() {
+  $('input, textarea').keyup(debounce(function(){
+  checkNotEmpty();
+  alertMissingFields();
+  },400));
   }
 
   $('#send').click(function(){
+  if (checkNotEmpty()) {
   var params = $('form').serialize();
   $.post('/email', params);
-  $('.close-modal, #send, form, #thanks h3').hide(700);
-  delayModalClose();
+  $('.close-modal, form, #thanks h3').hide(700);
+  setTimeout(closeModal, 2200);
   $('#thanks h1').text(" Message away!").css('color', 'green')
+  } else {
+  alertMissingFields();
+  window.alert("Please make sure highlighted fields are complete.")
+  watchFields();
+  }
   })
