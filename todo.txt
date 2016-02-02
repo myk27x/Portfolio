@@ -2,10 +2,7 @@ This is where any TODO things should be!
 
 GENERAL:  make mobile responsive!
 
-EMAIL:    make contact stuff mandatory in f/e (i.e. field cannot be blank)
-          or rescue from blank field
-
-          style both emails (don't forget txt!)
+EMAIL:    style both emails (don't forget txt!)
 
 JS:       change from pageYoffset to waypoint for mobile???
 
