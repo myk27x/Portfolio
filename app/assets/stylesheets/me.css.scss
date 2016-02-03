@@ -1,10 +1,15 @@
 #me-container {
-  position: fixed;
-  width: 316px;
+  padding-top: 100px;
+  height: 70vh;
+  margin: auto;
   #photo {
-    width: 100%;
-    min-width: 100px;
-    max-width: 316px;
+    background-image: url("/profile.jpg");
+    background-size: 100%;
+    width: 316px;
+    height: 316px;
+    // background: blue;
+    // max-width: 316px;
+    margin: 0 auto;
     border: solid 2px white;
     border-radius: 50%;
   }

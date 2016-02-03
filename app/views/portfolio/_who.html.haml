@@ -1,13 +1,14 @@
-.pusher
-.sectionIntro#about
-  Who am I?
-  #name Michael Reed
-.pusher
-#blurb= render "blurb"
-
 .sectionIntro#projects Projects
 - if current_user
   #viewAllProjects=  link_to  "VIEW ALL", projects_path
 .pusher
 .projectContainer
   = render @project
+
+-# .pusher
+.sectionIntro#about
+  Who am I?
+  -# #name Michael Reed
+.pusher
+#blurb
+  -# = render "blurb"

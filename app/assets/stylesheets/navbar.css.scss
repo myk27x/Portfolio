@@ -36,23 +36,23 @@
   height: 50px;
   background: linear-gradient( to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.8) 100%);
   transition: color 3s ease-in-out;
-  .spacer {
-    width: 25%;
-  }
-  #toAbout, #toProjects, #openContact {
-    float: right;
-    line-height: 50px;
-    font-family: sans-serif;
-    font-size: 20px;
-    text-align: center;
-  }
-  .navlinks {
+  .links {
+    background: blue;
+    display: flex;
+    width: 396px;
     height: 50px;
-    padding: 0 10px;
-    cursor: pointer;
-    &:hover {
-      background: (linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.1) 100%));
-      color: #ADE;
+    margin: auto;
+    #toAbout, #toProjects, #openContact {
+      width: 33.3%;
+      font-family: sans-serif;
+      font-size: 17px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+      &:hover {
+        background: (linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.1) 100%));
+        color: #ADE;
+      }
     }
   }
 }

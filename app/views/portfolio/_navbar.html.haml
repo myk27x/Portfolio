@@ -1,21 +1,21 @@
 #sectionHeader.fixed
   #sectionNames
-    #section1 Who am I?
+    #section1 Projects
     #whiteSpace{ style: "height:32px; width: 100px;"}
-    #section2 Projects
+    #section2 Who am I?
 #testSpacer.fixed
 
 #navFiller.fixed
 
 #navbar.fixed
-  .spacer
-  #openContact
-    .navlinks CONTACT
-    = render "info"
-  #toProjects
-    .navlinks PROJECTS
-  #toAbout
-    .navlinks ABOUT
+  .links
+    #toProjects
+      PROJECTS
+    #toAbout
+      ABOUT
+    #openContact
+      CONTACT
+      -# = render "info"
 
 #footerOverlay.fixed
   #toTop.fa.fa-3x.fa-arrow-circle-o-up
