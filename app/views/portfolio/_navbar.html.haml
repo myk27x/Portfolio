@@ -8,12 +8,17 @@
 #navFiller.fixed
 
 #navbar.fixed
+  = link_to_modal login_path do
+    #login
+  - if current_user
+    = link_to logout_path do
+      #logout
   .links
     #toProjects
       PROJECTS
     #toAbout
       ABOUT
-    #openContact
+    #toContact
       CONTACT
       -# = render "info"
 

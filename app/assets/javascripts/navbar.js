@@ -12,8 +12,8 @@ $(document).ready(function(){
     $('body').animate({scrollTop: $('#projects').offset().top -32}, 600);
   });
 
-  $('#openContact').children('.navlinks').click(function(){
-    $('#info').slideToggle(500);
+  $('#toContact').click(function(){
+    $('body').animate({scrollTop: $('#contact').offset().top -32}, 600);
   });
 
 });
