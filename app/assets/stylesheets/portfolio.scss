@@ -1,34 +1,13 @@
 #header {
-  // height: 354px;
-  // transition: background-image 3s ease-in-out;
+  background: green;
+  height: 550px;
 }
 
 #main {
 }
 
 #footer {
-  z-index: -1;
-  text-align: center;
-  background: yellow;
-  display: flex;
-  flex-wrap: wrap;
-  height: 10vh;
   width: 100%;
-  #login {
-    background: green;
-    width: 100px;
-    height: 10vh;
-  }
-  #newProject {
-    width: 100px;
-    height: 10vh;
-    background: red;
-  }
-  #logout {
-    background: black;
-    position: absolute;
-    right: 0px;
-    width: 100px;
-    height: 10vh;
-  }
+  height: 50px;
+  background: dimgray;
 }

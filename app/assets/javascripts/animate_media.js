@@ -65,10 +65,10 @@ function animateMedia() {
     }
 
 // fill the navbar background after scrolling down
-    if ((distanceY >= 304) && ($('#navFiller').height() < 51)) {
+    if ((distanceY >= 500) && ($('#navFiller').height() < 51)) {
       $('#navFiller')
-        .css('top', (354 - distanceY))
-        .css('height', (distanceY - 304))
+        .css('top', (550 - distanceY))
+        .css('height', (distanceY - 500))
       if ($('#navFiller').height() > 50) {
         $('#navFiller').css('top', 0).css('height', 50)
       }
