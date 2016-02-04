@@ -1,57 +1,143 @@
-#me-container {
+#contact {
+  background-color: gray;
   padding-top: 100px;
   height: 70vh;
   margin: auto;
   #photo {
     background-image: url("/profile.jpg");
     background-size: 100%;
-    width: 316px;
-    height: 316px;
-    // background: blue;
-    // max-width: 316px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     border: solid 2px white;
     border-radius: 50%;
   }
-  .centering {
-    width: 140px;
-    margin: 0 auto;
+}
+
+#mediaLinks {
+  width: 200px;
+  font-size: 32px;
+  display: flex;
+  margin: 5px auto;
+  a {
+    text-decoration: none;
   }
-  #media-links {
-    margin-top: 2px;
-    font-size: 32px;
-    display: flex;
-    a {
-      text-decoration: none;
-    }
-    #linkedin, #twitter, #github, #medium {
-      margin: 0 5px;
-    }
-    .bg {
+  .bg {
+    position: relative;
+    line-height: 27px;
+    height: 26px;
+    width: 27px;
+    border-radius: 5px;
+    &:hover {
       background: white;
-      line-height: 27px;
-      height: 26px;
-      width: 27px;
-      border-radius: 5px;
     }
+  }
+  .bg-alt-email {
+    position: relative;
+    line-height: 25px;
+    height: 25px;
+    width: 31px;
+    border-radius: 5px;
+    &:hover {
+      background: red;
+    }
+  }
+  .bg-alt-resume {
+    position: relative;
+    line-height: 1;
+    height: 31px;
+    width: 27px;
+    border-radius: 5px;
+    &:hover {
+      background: black;
+    }
+  }
+  #linkedin {
+    bottom: 170px;
+    right: 85px;
     .fa-linkedin-square {
-      color: #007BB5;
+      color: black;
+      &:hover {
+        color: #007BB5;
+        box-shadow: 0px 0px 10px #FFF;
+      }
     }
+  }
+  #twitter {
+    bottom: 83px;
+    right: 91px;
     .fa-twitter-square {
-      color: #55ACEE;
+      color: black;
+      &:hover {
+        color: #55ACEE;
+        box-shadow: 0px 0px 10px #FFF;
+      }
     }
-    .fa-github-square {
-      color: #333;
-    }
+  }
+  #medium {
+    bottom: 23px;
+    right: 57px;
+    font-size: 29px;
+    position: relative;
     .fa-medium {
-      font-size: 29px;
-      color: lime;
+      color: black;
+      &:hover {
+        color: lime;
+      }
+    }
+  }
+  #github {
+    left: 4px;
+    .fa-github-square {
+      color: black;
+      &:hover {
+        color: #333;
+        box-shadow: 0px 0px 10px #FFF;
+      }
+    }
+  }
+  #email {
+    bottom: 23px;
+    left: 69px;
+    position: relative;
+    .fa-envelope {
+      color: black;
+      &:hover {
+        color: white;
+        box-shadow: 0px 0px 10px #F00;
+      }
+    }
+  }
+  #phone {
+    bottom: 83px;
+    left: 97px;
+    .fa-phone-square {
+      color: black;
+      &:hover {
+        color: green;
+        box-shadow: 0px 0px 10px #FFF;
+      }
+    }
+  }
+  #resume {
+    bottom: 170px;
+    left: 90px;
+    .fa-file-text {
+      color: black;
+      &:hover {
+        color: #F8F8FF;
+        box-shadow: 0px 0px 10px #000;
+      }
     }
   }
 }
 
-.fix2nav {
-  position: fixed;
-  top: 112px;
-  left: 88px;
+.corner {
+  position: absolute;
+  left: 17px;
+  top: 0px;
+  width: 0;
+  height: 0;
+  border-right: 10px solid grey;
+  border-bottom: 10px solid transparent;
 }
