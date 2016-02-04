@@ -1,8 +1,10 @@
+#thingHere {
+  height: calc(100vh - 400px);
+}
+
 #contact {
-  background-color: gray;
-  padding-top: 100px;
-  height: 70vh;
-  margin: auto;
+  // position: relative;
+  // top: 100px;
   #photo {
     background-image: url("/profile.jpg");
     background-size: 100%;
