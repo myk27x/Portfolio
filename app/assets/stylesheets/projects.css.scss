@@ -11,7 +11,7 @@
   margin: 0 auto;
   margin-bottom: 50px;
   border: solid 2px black;
-  .left-display {
+  .imageHolder {
     .image {
       width: 271px;
       height: 271px;
@@ -22,7 +22,7 @@
     }
   }
   &:hover {
-    box-shadow: 0px 0px 40px 0px rgba(0,0,200,1);
+    box-shadow: 0px 0px 40px 0px rgba(26,71,42,1);
   }
 }
 
