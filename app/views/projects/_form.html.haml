@@ -22,7 +22,7 @@
     .submit
       = f.submit "SUBMIT"
     - if current_user
-      .admin-links
+      .adminLinks
         - if @project.title
           .show= link_to "SHOW", project_path(@project)
         .home= link_to "HOME", root_path

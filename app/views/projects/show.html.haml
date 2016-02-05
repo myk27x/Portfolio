@@ -20,6 +20,6 @@
     = link_to 'code', "http://#{@project.code}", target: "_blank"
     on GitHub
   - if current_user
-    .admin-links
+    .adminLinks
       .edit= link_to "EDIT", edit_project_path(@project)
       .home= link_to "HOME", root_path

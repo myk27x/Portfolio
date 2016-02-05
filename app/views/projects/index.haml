@@ -25,7 +25,7 @@
         view the
         = link_to 'code', "http://#{project.code}", target: "_blank"
         on GitHub
-      .admin-links
+      .adminLinks
         .edit=   link_to "EDIT"  , edit_project_path(project)
         .show=   link_to "SHOW"  , project
         .delete= link_to "DELETE", project, method: :delete, data: { confirm: 'Are you sure?' }

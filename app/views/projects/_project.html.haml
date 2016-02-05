@@ -3,6 +3,6 @@
     = link_to_modal project_path(project) do
       .image= image_tag("#{project.image}")
   - if current_user
-    .admin-links
+    .adminLinks
       .edit= link_to "EDIT", edit_project_path(project)
       .show= link_to "SHOW", project_path(project)
