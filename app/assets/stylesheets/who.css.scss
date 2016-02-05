@@ -1,10 +1,5 @@
 #about {
-  #name {
-    position: absolute;
-    top: 425px;
-    left: 95px;
-    margin-top: 15px;
-  }
+  height: calc(100vh - 52px);
 }
 
 #blurb {
@@ -14,17 +9,16 @@
   }
 }
 
-.pusher {
-  height: 71px;
-}
-
 .sectionIntro {
   padding-top: 15px;
   text-align: center;
   font-size: 28px;
 }
 
-#viewAllProjects, #newProject {
-  text-align: center;
-  margin: 10px;
+#projects {
+  padding-bottom: 71px;
+  #viewAllProjects, #newProject {
+    text-align: center;
+    margin: 10px;
+  }
 }

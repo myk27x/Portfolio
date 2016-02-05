@@ -13,7 +13,7 @@ $(document).ready(function(){
   });
 
   $('#toContact').click(function(){
-    $('body').animate({scrollTop: $('#contact').offset().top -32}, 600);
+    $('body').animate({scrollTop: $('#contact').offset().top}, 600);
   });
 
 });

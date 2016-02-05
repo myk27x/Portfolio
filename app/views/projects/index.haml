@@ -2,7 +2,7 @@
 - @project.each do |project|
   .projectContainer{style: "margin: 50px auto;"}
     .project{ id: "project_#{project.id}" }
-      .left-display
+      .imageHolder
         .image= image_tag("#{project.image}")
     .about{style: "width: 70%;"}
       - if project.title_font
