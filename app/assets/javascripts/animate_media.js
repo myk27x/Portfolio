@@ -25,5 +25,22 @@ function animateMedia() {
       $('#navFiller').css('top', 50).css('height', 0)
     }
 
+// positions section names under navbar as section header
+    if (distanceY >= $('#header').height()) {
+      $('#sectionHeader, #section1, #testSpacer').css('visibility', 'visible')
+      if (($('#about').position().top - distanceY) <= 131) {
+        $('#section2').css('visibility', 'visible')
+        $('#sectionNames').css('bottom', (pageYOffset - ($('#about').position().top - 131)))
+      } else {
+        $('#section2').css('visibility', 'hidden')
+        $('#sectionNames').css('bottom', 1)
+      }
+      if (($('#about').position().top - pageYOffset) <= 35) {
+        $('#sectionNames').css('bottom', 95)
+      }
+    } else {
+      $('#sectionHeader, #section1, #section2, #testSpacer').css('visibility', 'hidden')
+    }
+
   });
 };

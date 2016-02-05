@@ -8,6 +8,7 @@
   height: 32px;
   background: white;
   top: 50px;
+  border-bottom: 2px solid black;
   text-align: center;
   visibility: hidden;
   #sectionNames {
@@ -18,13 +19,6 @@
       visibility: hidden;
     }
   }
-}
-
-#testSpacer {
-  top: 82px;
-  height: 2px;
-  background: black;
-  visibility: hidden;
 }
 
 #navFiller {
