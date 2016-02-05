@@ -42,5 +42,11 @@ function animateMedia() {
       $('#sectionHeader, #section1, #section2, #testSpacer').css('visibility', 'hidden')
     }
 
+    if (($('#contact').position().top - distanceY) < 70) {
+      $('#sectionHeader').slideUp(100)
+    } else {
+      $('#sectionHeader').slideDown(100)
+    }
+
   });
 };
