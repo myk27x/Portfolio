@@ -3,7 +3,7 @@
     height: calc(100vh - 400px);
   }
   #photo {
-    background-image: url("/profile.jpg");
+    background-image: url("profile.jpg");
     background-size: 100%;
     width: 300px;
     height: 300px;
@@ -137,6 +137,6 @@
   top: 0px;
   width: 0;
   height: 0;
-  border-right: 10px solid grey;
+  border-right: 10px solid #5D5D5D;
   border-bottom: 10px solid transparent;
 }

@@ -1,5 +1,38 @@
+#headerHue {
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  #container {
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 50%;
+    overflow: hidden;
+    #name, #subName {
+      position: absolute;
+      width: calc(100% - 140px);
+      margin: 0px 70px;
+      color: rgba(255, 255, 255, 1);
+    }
+    #name {
+      font-size: 60px;
+      left: 100%;
+    }
+    #subName {
+      font-size: 30px;
+      top: 65px;
+      left: -100%;
+    }
+  }
+}
+
 #header {
-  background: #AAA;
+  background-image: url('punkBG.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   margin-bottom: 32px;
 }

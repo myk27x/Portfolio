@@ -1,41 +1,24 @@
 .fixed {
   position: fixed;
   width: 100%;
-  display: block;
-}
-
-#sectionHeader {
-  height: 32px;
-  background: white;
-  top: 50px;
-  border-bottom: 2px solid black;
-  text-align: center;
-  visibility: hidden;
-  #sectionNames {
-    font-size: 28px;
-    position: relative;
-    bottom: 0px;
-    #section1, #section2 {
-      visibility: hidden;
-    }
-  }
 }
 
 #navFiller {
   top: 50px;
-  background: #FFF8DC;
+  background: black;
+  // background: #FFF8DC;
 }
 
 #navbar {
   height: 50px;
-  background: linear-gradient( to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.8) 100%);
-  transition: color 3s ease-in-out;
+  // background: rgba(0,0,0, 0.5);
   .links {
     display: flex;
     width: 396px;
     height: 50px;
     margin: auto;
     #toAbout, #toProjects, #toContact {
+      color: #FAEBD7;
       width: 33.3%;
       font-family: sans-serif;
       font-size: 17px;
@@ -43,8 +26,8 @@
       line-height: 50px;
       cursor: pointer;
       &:hover {
-        background: (linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0.1) 100%));
-        color: #ADE;
+        color: white;
+        font-size: 20px;
       }
     }
   }
