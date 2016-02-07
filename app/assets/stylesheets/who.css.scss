@@ -1,5 +1,6 @@
 #about {
-  height: calc(100vh - 52px);
+  height: calc(100vh - 5px);
+  background-color: lightgray;
 }
 
 #blurb {
@@ -10,13 +11,9 @@
 }
 
 .sectionIntro {
-  padding-top: 15px;
+  padding-top: 20px;
   text-align: center;
-  font-size: 28px;
-}
-
-#projects {
-  padding-bottom: 71px;
+  font-size: 48px;
 }
 
 .admin {

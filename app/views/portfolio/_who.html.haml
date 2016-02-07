@@ -1,4 +1,5 @@
-.sectionIntro#projects Projects
+.sectionIntro#projects
+  %p Projects
 - if current_user
   .admin
     #viewAllProjects=  link_to  "VIEW ALL", projects_path
@@ -8,6 +9,6 @@
   = render @project
 
 .sectionIntro#about
-  Who am I?
+  %p Who am I?
   -# #blurb
   -#   = render "blurb"
