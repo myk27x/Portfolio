@@ -1,20 +1,49 @@
 function animateMedia() {
-  window.addEventListener('scroll', function(){
+
+// animate top page text into view on first load
+  $('#name, #subName').animate({'left':'0%'},700);
+
+// function variables un-modified my scroll event
+  var stop = 0
+  var shown = false
+  var position = $(window).scrollTop();
+
+// start of scroll event listener
+  $(window).scroll(function(){
     distanceY = window.pageYOffset || document.documentElement.scrollTop
+
+// animates text on top page
+    if ((distanceY > 80) && (stop == 0) && (distanceY > position)) {
+      $('#name').animate({'left':'-100%'}, 200,
+        function(){
+          $('#name').css('left', '100%');
+        })
+      $('#subName').animate({'left':'100%'}, 200,
+        function(){
+          $('#subName').css('left', '-100%');
+        })
+      stop++
+    } else if ((distanceY < 400) && (stop == 1) && (distanceY < position)) {
+      $('#name, #subName').animate({'left':'0%'},400);
+      stop--
+    }
+    position = distanceY;
 
 // toggles toTop div when scrolling down
     switch (true) {
-      case (distanceY > 150):
+      case ((distanceY > 150) && shown == false):
         $('#footerOverlay').slideDown(400)
+        shown = true
         break;
-      case (distanceY < 150):
+      case ((distanceY < 150) && shown == true):
         $('#footerOverlay').slideUp(400);
+        shown = false
         break;
       default:
     }
 
-// fill the navbar background after scrolling down
-    if ((($('#main').position().top - distanceY )< 51) && ($('#navFiller').height() < 51)) {
+// start filling navbar background when project(main) div meets bottom of navbar
+    if ((($('#main').position().top - distanceY )< 83) && ($('#navFiller').height() < 51)) {
       $('#navFiller')
       .css('top', ($('#header').height() - distanceY))
       .css('height', ((($('#header').height() - 50)- distanceY)*-1))
@@ -25,28 +54,18 @@ function animateMedia() {
       $('#navFiller').css('top', 50).css('height', 0)
     }
 
-// positions section names under navbar as section header
-    if (distanceY >= $('#header').height()) {
-      $('#sectionHeader, #section1, #testSpacer').css('visibility', 'visible')
-      if (($('#about').position().top - distanceY) <= 131) {
-        $('#section2').css('visibility', 'visible')
-        $('#sectionNames').css('bottom', (pageYOffset - ($('#about').position().top - 131)))
+// highlights navbar sections as section indicators
+    function highlight(section, navlink, color, next, sectionOffset, nextOffset) {
+      if (($(section).position().top <= distanceY + sectionOffset) && !($(next).position().top <= distanceY + nextOffset)) {
+        $(navlink).css('background-color', color).css('color', 'black').css('font-size', '20px');
       } else {
-        $('#section2').css('visibility', 'hidden')
-        $('#sectionNames').css('bottom', 1)
+        $(navlink).css('background-color', '').css('color', '').css('font-size', '');
       }
-      if (($('#about').position().top - pageYOffset) <= 35) {
-        $('#sectionNames').css('bottom', 95)
-      }
-    } else {
-      $('#sectionHeader, #section1, #section2, #testSpacer').css('visibility', 'hidden')
     }
 
-    if (($('#contact').position().top - distanceY) < 70) {
-      $('#sectionHeader').slideUp(100)
-    } else {
-      $('#sectionHeader').slideDown(100)
-    }
+    highlight('#main', '#toProjects', 'white', '#about', 30, 50);
+    highlight('#about', '#toAbout', 'lightgray', '#contact', 50, 50);
+    highlight('#contact', '#toContact', '#5D5D5D', '#photo', 50, 50);
 
   });
 };
