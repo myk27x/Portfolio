@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   function view(clicked, goto) {
     $(clicked).click(function(){
-      $('body').animate({scrollTop: $(goto).offset().top}, 600);
+      $('body').animate({scrollTop: $(goto).offset().top}, 1300);
     })
   }
 
