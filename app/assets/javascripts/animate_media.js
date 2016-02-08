@@ -1,9 +1,18 @@
 function animateMedia() {
 
-// animate top page text into view on first load
-  $('#name, #subName').animate({'left':'0%'},700);
+// animate top page text into view on load -- independent of scroll
+  function slideIn1() {
+    $('#name').animate({'left':'0%'},700);
+  };
 
-// function variables un-modified my scroll event
+  function slideIn2(){
+    $('#subName').animate({'left':'0%'},700);
+  };
+
+  slideIn1();
+  setTimeout(slideIn2, 350);
+
+// function variables un-modified by scroll event
   var stop = 0
   var shown = false
   var position = $(window).scrollTop();
@@ -13,14 +22,14 @@ function animateMedia() {
     distanceY = window.pageYOffset || document.documentElement.scrollTop
 
 // animates text on top page
-    if ((distanceY > 80) && (stop == 0) && (distanceY > position)) {
+    if ((distanceY > 150) && (stop == 0) && (distanceY > position)) {
       $('#name').animate({'left':'-100%'}, 200,
         function(){
-          $('#name').css('left', '100%');
+          $(this).css('left', '100%');
         })
       $('#subName').animate({'left':'100%'}, 200,
         function(){
-          $('#subName').css('left', '-100%');
+          $(this).css('left', '-100%');
         })
       stop++
     } else if ((distanceY < 400) && (stop == 1) && (distanceY < position)) {
