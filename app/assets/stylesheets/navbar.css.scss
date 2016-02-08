@@ -11,7 +11,6 @@
 
 #navbar {
   height: 50px;
-  // background: rgba(0,0,0, 0.5);
   .links {
     display: flex;
     width: 396px;
@@ -25,6 +24,7 @@
       text-align: center;
       line-height: 50px;
       cursor: pointer;
+      transition: font-size 0.1s;
       &:hover {
         color: white;
         font-size: 20px;
@@ -32,6 +32,22 @@
     }
   }
 }
+
+.selection {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right,
+    rgba(black,0)5%,
+    rgba(orange,1)20%,
+    rgba(orange,1)80%,
+    rgba(black,0)95%);
+  margin: 0 auto;
+  border-radius: 3px;
+  position: relative;
+  bottom: 12px;
+  display: none;
+}
+
 
 #login {
   position: fixed;
