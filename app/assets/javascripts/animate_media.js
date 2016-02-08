@@ -1,6 +1,10 @@
 function animateMedia() {
 
 // animate top page text into view on load -- independent of scroll
+  function showIntro() {
+    $('#welcome').fadeIn(1000);
+  }
+
   function slideIn1() {
     $('#name').animate({'left':'0%'},700);
   };
@@ -9,8 +13,9 @@ function animateMedia() {
     $('#subName').animate({'left':'0%'},700);
   };
 
-  slideIn1();
-  setTimeout(slideIn2, 350);
+  setTimeout(showIntro, 500);
+  setTimeout(slideIn1, 1500);
+  setTimeout(slideIn2, 2500);
 
 // function variables un-modified by scroll event
   var stop = 0
@@ -31,9 +36,11 @@ function animateMedia() {
         function(){
           $(this).css('left', '-100%');
         })
+      $('#welcome').animate({'top':'-65px'}, 200);
       stop++
     } else if ((distanceY < 400) && (stop == 1) && (distanceY < position)) {
       $('#name, #subName').animate({'left':'0%'},400);
+      $('#welcome').animate({'top':'0px'}, 400);
       stop--
     }
     position = distanceY;
@@ -64,17 +71,31 @@ function animateMedia() {
     }
 
 // highlights navbar sections as section indicators
+    // function highlight(section, navlink, color, next, sectionOffset, nextOffset) {
+    //   if (($(section).position().top <= distanceY + sectionOffset) && !($(next).position().top <= distanceY + nextOffset)) {
+    //     $(navlink).css('background-color', color).css('color', 'black').css('font-size', '20px');
+    //   } else {
+    //     $(navlink).css('background-color', '').css('color', '').css('font-size', '');
+    //   }
+    // }
+    //
+    // highlight('#main', '#toProjects', 'white', '#about', 30, 50);
+    // highlight('#about', '#toAbout', 'lightgray', '#contact', 50, 50);
+    // highlight('#contact', '#toContact', '#5D5D5D', '#photo', 50, 50);
+
     function highlight(section, navlink, color, next, sectionOffset, nextOffset) {
       if (($(section).position().top <= distanceY + sectionOffset) && !($(next).position().top <= distanceY + nextOffset)) {
-        $(navlink).css('background-color', color).css('color', 'black').css('font-size', '20px');
+        $(navlink).css('background-color', color).css('color', '')
+          .children().fadeIn(300);
       } else {
-        $(navlink).css('background-color', '').css('color', '').css('font-size', '');
+        $(navlink).css('background-color', '').css('color', '')
+          .children().fadeOut(100);
       }
     }
 
-    highlight('#main', '#toProjects', 'white', '#about', 30, 50);
-    highlight('#about', '#toAbout', 'lightgray', '#contact', 50, 50);
-    highlight('#contact', '#toContact', '#5D5D5D', '#photo', 50, 50);
+    highlight('#main', '#toProjects', '', '#about', 30, 50);
+    highlight('#about', '#toAbout', '', '#contact', 50, 50);
+    highlight('#contact', '#toContact', '', '#photo', 50, 50);
 
   });
 };
