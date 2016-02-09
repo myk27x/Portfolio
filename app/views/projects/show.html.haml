@@ -23,3 +23,10 @@
     .adminLinks
       .edit= link_to "EDIT", edit_project_path(@project)
       .home= link_to "HOME", root_path
+
+:javascript
+  function modify() {
+  $('.modal').addClass('modified')
+  }
+
+  setTimeout(modify, 250)

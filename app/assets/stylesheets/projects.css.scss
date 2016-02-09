@@ -27,8 +27,19 @@
   }
 }
 
+.modified {
+  border-radius: 2px !important;
+  width: auto !important;
+  margin: 0 5% !important;
+  background: none !important;
+  padding: 0 !important;
+  top: 10% !important;
+  right: 5px !important;
+  left: 5px !important;
+}
+
 .about {
-  width: 800px;
+  width: 100%;
   background: white;
   text-align: center;
   .title {

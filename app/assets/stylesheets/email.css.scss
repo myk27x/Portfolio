@@ -4,9 +4,19 @@
   }
 }
 
+.altered {
+  max-width: 400px;
+  margin: 0 auto !important;
+  background: none !important;
+  padding: 0 !important;
+  top: 10% !important;
+  right: 5px !important;
+  left: 5px !important;
+}
+
 #email-wrapper {
   background: #ddd;
-  width: 375px;
+  width: 100%;
   text-align: center;
   #thanks {
     padding-top: 5px;
