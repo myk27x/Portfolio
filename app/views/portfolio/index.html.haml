@@ -3,10 +3,14 @@
     %h1#welcome WELCOME!
     #name I'm Michael
     #subName Ruby on Rails Developer
+  #acknowledgement
+    background courtesy of
+    = link_to "@acartis", "http://acatris.deviantart.com/", target: "_blank"
 
 #header
   = render "navbar"
 #main
+  = render "projects"
   = render "who"
 #footer
   = render "me"

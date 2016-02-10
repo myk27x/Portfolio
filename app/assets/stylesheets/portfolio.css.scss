@@ -31,6 +31,18 @@
       left: -100%;
     }
   }
+  #acknowledgement {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: rgba(255, 255, 255, 0.4);
+    a {
+      color: inherit;
+      &:visited {
+        color: inherit;
+      }
+    }
+  }
 }
 
 #header {
