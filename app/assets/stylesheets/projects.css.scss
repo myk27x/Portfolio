@@ -1,3 +1,21 @@
+.sectionIntro {
+  text-align: center;
+  font-size: 48px;
+}
+
+#projects {
+  padding-top: 20px;
+}
+
+.admin {
+  position: relative;
+  bottom: 40px;
+  #viewAllProjects, #newProject {
+    text-align: center;
+    margin: 10px;
+  }
+}
+
 .projectContainer {
   width: 90%;
   max-width: 1100px;
