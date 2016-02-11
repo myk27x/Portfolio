@@ -1,26 +1,15 @@
-#about {
-  height: calc(100vh - 5px);
-  background-color: lightgray;
-}
-
-#blurb {
-  height: 229px;
-  p {
-    margin: 0;
-  }
-}
-
 .sectionIntro {
-  padding-top: 20px;
   text-align: center;
   font-size: 48px;
 }
 
-.admin {
-  position: relative;
-  bottom: 40px;
-  #viewAllProjects, #newProject {
-    text-align: center;
-    margin: 10px;
-  }
+#about {
+  background-color: lightgray;
+  padding: 20px 0 1px 0;
+  overflow: hidden;
+}
+
+#blurb p {
+  font-size: 20px;
+  margin: 0;
 }
