@@ -1,14 +1,4 @@
-.sectionIntro#projects
-  %p Projects
-- if current_user
-  .admin
-    #viewAllProjects=  link_to  "VIEW ALL", projects_path
-    #newProject= link_to "NEW", new_project_path
-
-.projectContainer
-  = render @project
-
 .sectionIntro#about
   %p Who am I?
-  -# #blurb
-  -#   = render "blurb"
+  #blurb
+    = render "blurb"
