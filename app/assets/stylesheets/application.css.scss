@@ -16,4 +16,9 @@
 
 body {
   margin: 0;
+  background-image: image-url('punkBG.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
