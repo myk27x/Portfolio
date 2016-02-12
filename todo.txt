@@ -3,11 +3,10 @@ This is where any TODO things should be!
 GENERAL:  make mobile responsive!
 
 EMAIL:    style both emails (don't forget txt!)
+          lined paper background?
 
-PROJECTS: media queries for show in modal
+PROJECTS:
 
 SESSIONS: login with modal without redirect?
 
-welcome
-michael
-cook, mechanic, textile hobbyist, aggressive skater, anomoly, Ruby on Rails Developer
+HEADER:   cook, mechanic, textile hobbyist, aggressive skater, anomoly, Ruby on Rails Developer

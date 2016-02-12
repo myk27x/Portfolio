@@ -13,3 +13,14 @@
   font-size: 20px;
   margin: 0;
 }
+
+#achievements {
+  display: inline-flex;
+  margin: 0 5%;
+  .logo {
+    padding: 3px;
+    img {
+      height: 50px;
+    }
+  }
+}

@@ -1,4 +1,7 @@
 .sectionIntro#about
   %p Who am I?
+  #achievements
+    - @badges.each do |image|
+      .logo= image_tag("badges/#{image}")
   #blurb
     = render "blurb"
