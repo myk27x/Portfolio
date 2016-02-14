@@ -10,7 +10,7 @@ function animateMedia() {
 
 // function variables un-modified by scroll event
   var stop = 0
-  var shown = false
+  var up = false
   var position = $(window).scrollTop();
 
 // start of scroll event listener
@@ -27,15 +27,15 @@ function animateMedia() {
     }
     position = distanceY;
 
-// toggles toTop div when scrolling down
+// toggles toTop arrow when scrolling down
     switch (true) {
-      case ((distanceY > 150) && shown == false):
-        $('#footerOverlay').slideDown(400)
-        shown = true
+      case ((distanceY > 75) && up == false):
+        $('#toTop').css('transform', 'rotate(0deg)');
+        up = true
         break;
-      case ((distanceY < 150) && shown == true):
-        $('#footerOverlay').slideUp(400);
-        shown = false
+      case ((distanceY < 75) && up == true):
+        $('#toTop').css('transform', 'rotate(180deg)');
+        up = false
         break;
       default:
     }
