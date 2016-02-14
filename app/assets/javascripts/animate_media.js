@@ -2,20 +2,11 @@ function animateMedia() {
 
 // animate top page text into view on load -- independent of scroll
   function showIntro() {
-    $('#welcome').fadeIn(1000);
+    $('#container').animate({'opacity':'1'},2000)
+    $('#name, #subName').animate({'top':'0%'},1000);
   }
 
-  function slideIn1() {
-    $('#name').animate({'left':'0%'},700);
-  };
-
-  function slideIn2(){
-    $('#subName').animate({'left':'0%'},700);
-  };
-
-  setTimeout(showIntro, 500);
-  setTimeout(slideIn1, 1500);
-  setTimeout(slideIn2, 2500);
+  showIntro();
 
 // function variables un-modified by scroll event
   var stop = 0
@@ -28,19 +19,10 @@ function animateMedia() {
 
 // animates text on top page
     if ((distanceY > 150) && (stop == 0) && (distanceY > position)) {
-      $('#name').animate({'left':'-100%'}, 200,
-        function(){
-          $(this).css('left', '100%');
-        })
-      $('#subName').animate({'left':'100%'}, 200,
-        function(){
-          $(this).css('left', '-100%');
-        })
-      $('#welcome').animate({'top':'-65px'}, 200);
+      $('#welcome, #name, #subName').animate({'top':'-100%'}, 200);
       stop++
     } else if ((distanceY < 400) && (stop == 1) && (distanceY < position)) {
-      $('#name, #subName').animate({'left':'0%'},400);
-      $('#welcome').animate({'top':'0px'}, 400);
+      $('#welcome, #name, #subName').animate({'top':'0%'},400);
       stop--
     }
     position = distanceY;

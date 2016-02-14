@@ -1,4 +1,5 @@
-#headerHue.fixed
+#header
+  = render "navbar"
   #container
     %h1#welcome WELCOME!
     #name I'm Michael
@@ -7,8 +8,6 @@
     background courtesy of
     = link_to "@acatris", "http://acatris.deviantart.com/", target: "_blank"
 
-#header
-  = render "navbar"
 #main
   = render "projects"
   = render "who"
