@@ -53,22 +53,10 @@ function animateMedia() {
     }
 
 // highlights navbar sections as section indicators
-    // function highlight(section, navlink, color, next, sectionOffset, nextOffset) {
-    //   if (($(section).position().top <= distanceY + sectionOffset) && !($(next).position().top <= distanceY + nextOffset)) {
-    //     $(navlink).css('background-color', color).css('color', 'black').css('font-size', '20px');
-    //   } else {
-    //     $(navlink).css('background-color', '').css('color', '').css('font-size', '');
-    //   }
-    // }
-    //
-    // highlight('#main', '#toProjects', 'white', '#about', 30, 50);
-    // highlight('#about', '#toAbout', 'lightgray', '#contact', 50, 50);
-    // highlight('#contact', '#toContact', '#5D5D5D', '#photo', 50, 50);
-
     function highlight(section, navlink, color, next, sectionOffset, nextOffset) {
       if (($(section).position().top <= distanceY + sectionOffset) && !($(next).position().top <= distanceY + nextOffset)) {
         $(navlink).css('background-color', color).css('color', '')
-          .children().fadeIn(300);
+          .children().fadeIn(400);
       } else {
         $(navlink).css('background-color', '').css('color', '')
           .children().fadeOut(100);

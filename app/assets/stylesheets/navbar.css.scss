@@ -33,15 +33,14 @@
 }
 
 .selection {
-  width: 60px;
-  height: 4px;
+  width: 70px;
+  height: 1px;
   background: linear-gradient(to right,
     rgba(black,0)5%,
-    rgba(orange,1)20%,
-    rgba(orange,1)80%,
+    rgba(orange,0.8)20%,
+    rgba(orange,0.8)80%,
     rgba(black,0)95%);
   margin: 0 auto;
-  border-radius: 3px;
   position: relative;
   bottom: 12px;
   display: none;
