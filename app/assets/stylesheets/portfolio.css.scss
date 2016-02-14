@@ -1,6 +1,5 @@
 #header {
   height: 100vh;
-  margin-bottom: 32px;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   #container {
@@ -42,7 +41,8 @@
   }
 }
 
-#main {
+#main #projects, #about {
+  padding-top: 50px;
 }
 
 #footer {
