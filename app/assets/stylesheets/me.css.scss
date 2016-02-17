@@ -1,38 +1,33 @@
-#contact {
-  #farewell {
-    height: calc(100vh - 400px);
-  }
-  #photo {
-    background-image: image-url("profile.jpg");
-    background-size: 100%;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    border: solid 2px white;
-    border-radius: 50%;
-  }
+#photo {
+  background-image: image-url("profile.jpg");
+  background-size: 100%;
+  width: 300px;
+  height: 300px;
+  border: solid 2px white;
+  border-radius: 50%;
 }
 
 #mediaLinks {
-  width: 200px;
+  width: 90%;
   font-size: 32px;
   display: flex;
-  margin: 5px auto;
+  justify-content: space-around;
+  padding: 10px 0;
+  margin: 0 auto;
   a {
     text-decoration: none;
+    color: rgba(250, 235, 215, 0.5);
   }
   .bg {
-    position: relative;
     line-height: 27px;
     height: 26px;
-    width: 27px;
+    width: 23px;
     border-radius: 5px;
     &:hover {
       background: white;
     }
   }
   .bg-alt-email {
-    position: relative;
     line-height: 25px;
     height: 25px;
     width: 31px;
@@ -42,20 +37,16 @@
     }
   }
   .bg-alt-resume {
-    position: relative;
     line-height: 1;
     height: 31px;
     width: 27px;
-    border-radius: 5px;
+    border-top-right-radius: 12px;
     &:hover {
-      background: black;
+      background: white;
     }
   }
   #linkedin {
-    bottom: 170px;
-    right: 85px;
     .fa-linkedin-square {
-      color: black;
       &:hover {
         color: #007BB5;
         text-shadow: 0px 0px 10px #FFF;
@@ -63,10 +54,7 @@
     }
   }
   #twitter {
-    bottom: 83px;
-    right: 91px;
     .fa-twitter-square {
-      color: black;
       &:hover {
         color: #55ACEE;
         text-shadow: 0px 0px 10px #FFF;
@@ -74,21 +62,16 @@
     }
   }
   #medium {
-    bottom: 23px;
-    right: 57px;
     font-size: 29px;
-    position: relative;
     .fa-medium {
-      color: black;
       &:hover {
         color: lime;
+        text-shadow: 0px 0px 10px #000;
       }
     }
   }
   #github {
-    left: 4px;
     .fa-github-square {
-      color: black;
       &:hover {
         color: #333;
         text-shadow: 0px 0px 10px #FFF;
@@ -96,11 +79,7 @@
     }
   }
   #email {
-    bottom: 23px;
-    left: 69px;
-    position: relative;
     .fa-envelope {
-      color: black;
       &:hover {
         color: white;
         text-shadow: 0px 0px 10px #F00;
@@ -108,10 +87,7 @@
     }
   }
   #phone {
-    bottom: 83px;
-    left: 97px;
     .fa-phone-square {
-      color: black;
       &:hover {
         color: green;
         text-shadow: 0px 0px 10px #FFF;
@@ -119,24 +95,11 @@
     }
   }
   #resume {
-    bottom: 170px;
-    left: 90px;
-    .fa-file-text {
-      color: black;
+    .fa-file-pdf-o {
       &:hover {
-        color: #F8F8FF;
-        text-shadow: 0px 0px 10px #000;
+        color: red;
+        text-shadow: 0px 0px 10px #FFF;
       }
     }
   }
-}
-
-.corner {
-  position: absolute;
-  left: 17px;
-  top: 0px;
-  width: 0;
-  height: 0;
-  border-right: 10px solid #5D5D5D;
-  border-bottom: 10px solid transparent;
 }

@@ -9,48 +9,15 @@
 
 }
 
-@media (max-width: 400px) {
-  #contact {
-    #farewell {
-      height: calc(100vh - 350px);
-    }
-    #photo {
-      width: 250px!important;
-      height: 250px!important;
-    }
-  }
-
-  #mediaLinks {
-    #linkedin {
-      bottom: 145px;
-      right: 60px;
-    }
-    #twitter {
-      bottom: 70px;
-      right: 70px;
-    }
-    #medium {
-      bottom: 18px;
-      right: 43px;
-      font-size: 29px;
-      position: relative;
-    }
-    #github {
-      left: 4px;
-    }
-    #email {
-      bottom: 16px;
-      left: 52px;
-      position: relative;
-    }
-    #phone {
-      bottom: 70px;
-      left: 76px;
-    }
-    #resume {
-      bottom: 145px;
-      left: 65px;
+@media (max-width: 500px) {
+  #about {
+    #who {
+      #me {
+        float: none;
+        #photo {
+          margin: 0 auto;
+        }
+      }
     }
   }
-
 }

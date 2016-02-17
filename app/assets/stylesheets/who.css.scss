@@ -6,7 +6,14 @@
   }
 }
 
-#blurb p {
-  font-size: 20px;
-  margin: 0;
+#who {
+  margin: 0 10px;
+  #me {
+    float: left;
+    margin: 0 20px;
+  }
+  p {
+    font-size: 20px;
+    padding: 20px;
+  }
 }
