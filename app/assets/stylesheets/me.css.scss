@@ -21,7 +21,7 @@
   .bg {
     line-height: 27px;
     height: 26px;
-    width: 23px;
+    width: 26px;
     border-radius: 5px;
     &:hover {
       background: white;
@@ -30,7 +30,7 @@
   .bg-alt-email {
     line-height: 25px;
     height: 25px;
-    width: 31px;
+    width: 32px;
     border-radius: 5px;
     &:hover {
       background: red;
@@ -39,7 +39,7 @@
   .bg-alt-resume {
     line-height: 1;
     height: 31px;
-    width: 27px;
+    width: 26px;
     border-top-right-radius: 12px;
     &:hover {
       background: white;
@@ -47,6 +47,7 @@
   }
   #linkedin {
     .fa-linkedin-square {
+      margin-left: -1px;
       &:hover {
         color: #007BB5;
         text-shadow: 0px 0px 10px #FFF;
@@ -72,6 +73,7 @@
   }
   #github {
     .fa-github-square {
+      margin-left: -1px;
       &:hover {
         color: #333;
         text-shadow: 0px 0px 10px #FFF;
@@ -80,6 +82,7 @@
   }
   #email {
     .fa-envelope {
+      margin-left: -1px;
       &:hover {
         color: white;
         text-shadow: 0px 0px 10px #F00;
@@ -88,6 +91,7 @@
   }
   #phone {
     .fa-phone-square {
+      margin-left: -1px;
       &:hover {
         color: green;
         text-shadow: 0px 0px 10px #FFF;

@@ -10,10 +10,13 @@
 
 .admin {
   position: relative;
-  bottom: 40px;
+  bottom: 23px;
   #viewAllProjects, #newProject {
     text-align: center;
     margin: 10px;
+    a {
+      color: white;
+    }
   }
 }
 
@@ -47,7 +50,6 @@
 }
 
 .modified {
-  border-radius: 2px !important;
   width: auto !important;
   margin: 0 5% !important;
   background: none !important;
@@ -58,19 +60,21 @@
 }
 
 .about {
-  width: 100%;
-  background: white;
+  background: rgba(222, 184, 135, 0.9);
   text-align: center;
+  border: solid 12px rgba(0, 0, 0, 0.5);
+  padding: 12px;
+  text-shadow: 0px 0px 10px #fff;
   .title {
     margin: 0;
   }
   .description {
     font-size: 20px;
     .what {
-      margin: 10px;
+      margin: 10px 0;
     }
     .how {
-      margin: 10px;
+      margin: 10px 0;
       .heading {
         font-weight: bolder;
         text-decoration: underline;
@@ -81,17 +85,20 @@
     }
   }
   .links {
-    text-align: center;
     a{
-      color: red;
+      color: blue;
     }
   }
 }
 
 .adminLinks {
   display: flex;
-  .edit, .show, .home, .delete {
-    margin: 5px auto;
+}
+
+.edit, .show, .home, .delete {
+  margin: 5px auto;
+  a {
+    color: white;
   }
 }
 
