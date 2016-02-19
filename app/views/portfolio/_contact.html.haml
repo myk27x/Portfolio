@@ -1,3 +1,11 @@
 .section#contact
   %h1 Thanks for stopping by!
   #farewell
+    %h3 Let's get in touch!
+    #mediaLinks.fa
+      #email.bg-alt-email
+        = link_to_modal email_path do
+          .fa-envelope
+      #phone.bg
+        %a{href: "tel: +17274235459"}
+          .fa-phone-square
