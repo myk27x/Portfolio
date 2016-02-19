@@ -65,7 +65,7 @@ function animateMedia() {
 
     highlight('#main', '#toProjects', '', '#about', 30, 50);
     highlight('#about', '#toAbout', '', '#contact', 50, 50);
-    highlight('#contact', '#toContact', '', '#photo', 50, 50);
+    highlight('#contact', '#toContact', '', '#footer', 50, 50);
 
   });
 };
